@@ -1,0 +1,381 @@
+.menuBtn {
+    background-color: transparent;
+    border: none;
+    height: 38px;
+    margin: 16px 0 0 16px;
+    width: 36px;
+}
+md-toolbar h1 {
+    font-weight: normal;
+}
+md-list .md-button {
+    color: inherit;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+/* Using Data-URI converted from svg until <md-icon> becomes available
+https://github.com/google/material-design-icons
+*/
+.menuBtn {
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat  center center;
+}
+
+
+.custom-movie-container{
+
+    margin-top: 15px;
+    width: 700px;
+
+
+}
+
+.custom-actions-container{
+
+
+    width: 100%;
+    margin: 15px auto 0 auto;
+    max-width: 700px;
+
+}
+
+
+.result_object_title{
+    margin: 0;
+}
+
+
+
+
+.ng-hide{display: none;}
+
+
+.ng-show{display: block;}
+
+
+
+
+
+
+
+
+/***************************************
+  vAccordion
+ ***************************************/
+/**
+ * Example HTML:
+ *
+  <v-accordion class="vAccordion--default">
+    <v-pane>
+      <v-pane-header id="pane-header" aria-controls="pane-content">
+         [content]
+      </v-pane-header>
+      <v-pane-content id="pane-content" aria-labelledby="pane-header">
+        [content]
+      </v-pane-content>
+    </v-pane>
+  </v-accordion>
+ */
+/* Base styles
+ ***************************************/
+v-accordion {
+    display: block;
+}
+
+v-pane {
+    display: block;
+}
+v-pane.is-expanded > v-pane-content > div {
+    visibility: visible;
+}
+
+v-pane-header {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+v-pane-header:focus {
+    outline: none;
+}
+
+v-pane-content {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    max-height: 0px;
+}
+v-pane-content > div {
+    visibility: none;
+}
+
+/* Theme: default
+ ***************************************/
+.vAccordion--default v-accordion {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.vAccordion--default v-pane {
+    transition: transform 0.5s;
+}
+
+.vAccordion--default v-pane > v-pane-header > div > h4 {
+    margin: 0;
+    padding-left: 7px;
+}
+
+.vAccordion--default v-pane.is-expanded > v-pane-header {
+    border-bottom-color: #2196F3;
+}
+.vAccordion--default v-pane.is-expanded > v-pane-header::after {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+.vAccordion--default v-pane.is-expanded > v-pane-header::before {
+    transform: rotate(0deg);
+}
+.vAccordion--default v-pane.is-expanded > v-pane-content > div {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.vAccordion--default v-pane.is-expanded > v-pane-header > div > h4 {
+margin: 0;
+    padding-left: 7px;
+}
+
+.vAccordion--default v-pane.is-expanded-add > v-pane-content, .vAccordion--default v-pane.is-expanded-remove > v-pane-content {
+    transition: max-height 0.5s;
+}
+.vAccordion--default v-pane-header {
+    padding: 5px 0;
+    border-bottom: 2px solid #D8D8D8;
+    transition: color 0.25s, border-color 0.5s;
+}
+.vAccordion--default v-pane-header::after, .vAccordion--default v-pane-header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #2196F3;
+    transform-origin: 50% 50%;
+    transition: all 0.25s;
+}
+.vAccordion--default v-pane-header::before {
+    transform: rotate(-90deg);
+}
+.vAccordion--default v-pane-header:hover, .vAccordion--default v-pane-header:focus {
+    color: #2196F3;
+}
+.vAccordion--default v-pane-content > div {
+    padding-bottom: 20px;
+    will-change: transform, opacity;
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.searchEngineInput{
+    top: 15%;
+    font-size: 17px;
+}
+
+
+
+
+
+::-webkit-input-placeholder {
+color: #FFF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+color: #FFF;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color: #FFF;
+}
+
+:-ms-input-placeholder {
+color: #FFF;
+}
+
+.results-list-container{
+    height: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.md-desc-image{
+    width: 60px;
+    float: left;
+}
+
+.title-plus-desc-container{
+    height: 45px;
+    cursor:pointer;
+}
+.listOfSongs {
+    margin-top:60px;
+}
+
+.main-video-title {
+ font-size: 12px;
+}
+
+.main-video-description {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.more-info-container{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.more-info-container-rating{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+.more-info-container-ratingCount{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+.more-info-container-viewCount{
+    text-align: center;
+}
+
+
+.search-container{
+    width: 30%;
+}
+
+.search-input{
+    width: 60%;
+    margin-top: 5%;
+    float:left;
+}
+
+.search-button{
+    margin-top: 6%;
+    margin-left: 25px;
+}
+
+
+/* Loading spinner */
+
+#wrap {
+
+    margin-top: 50%;
+
+}
+
+
+.loading{
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-top-color: rgb(0,150,136);
+    border-bottom-color: rgb(0,150,136);
+    border-radius: 50%;
+}
+
+
+@keyframes spin{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@-moz-keyframes spin{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes spin{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+
+.outer{
+
+    -webkit-animation:  spin 1s infinite;
+    -moz-animation:  spin 1s infinite;
+    -ms-animation:  spin 1s infinite;
+    -o-animation:  spin 1s infinite;
+    animation:  spin 1s infinite;
+}
+
+.inner{
+    -webkit-animation:  spin 1s infinite;
+    -moz-animation:  spin 1s infinite;
+    -ms-animation:  spin 1s infinite;
+    -o-animation:  spin 1s infinite;
+    animation:  spin 1s infinite;
+}
+
+
+
+.footer, .push {
+    height: 50px; /* .push must be the same height as .footer */
+}
+
+.footer{
+    background-color: #f5f5f5;
+    width: 100%;
+/*    position: absolute;*/
+    margin-top: 20px;
+    bottom: 0px;
+}
+
+.footer-button{
+    float: left;
+    margin-right: 20px;
+    line-height: 50px;
+}
+
+.footer-buttons{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ft-link{
+
+}
+
+.footer-info{
+    line-height: 50px;
+    font-size: 11px;
+}
+
+.footer-wp{
+    transition: 0.5s;
+}
